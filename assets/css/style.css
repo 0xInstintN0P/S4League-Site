@@ -1,0 +1,288 @@
+/* 
+copyright: Martin Angelov 
+modified by : MiceDeveloper
+*/
+
+*{
+	margin:0;
+	padding:0;
+}
+
+html{
+	background:url('../img/main_bg.jpg') #000000 no-repeat center center fixed;
+	min-height:100%;
+	background-size:cover;
+}
+
+body{
+	font:15px/1.3 'Open Sans', sans-serif;
+	color: #ffffff;
+	min-height:100vh;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+a, a:visited {
+	outline:none;
+	color:#389dc1;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+#status{
+	background-color:#000000;
+	padding: 65px 75px;
+	width:385px;
+	height:100;
+	position:absolute;
+	top:70%;
+	left:78%;
+	margin:-235px 0 0 -325px;
+	box-shadow: 2px 2px 90px 12px #000000;
+}
+
+#status p{
+	font:Myriad Pro;
+	font-size:30px;
+}
+
+#box{
+	background-color:#242424;
+	opacity:0.93;
+	padding: 65px 75px;
+	width: min(95%, 700px);
+	min-height:400px;
+	box-shadow: 2px 2px 90px 12px #000000;
+	-moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+	margin: 20px 0;
+}
+	
+
+
+#box h1{
+	font-size:36px;
+	text-align: center;
+}
+
+#box input{
+	font: inherit;
+	font-size: 18px;
+	line-height: 30px;
+	background-color: #363636;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	display: block;
+	width: 400px;
+	margin: 45px auto 15px auto;
+	outline: none;
+}
+
+#box p{
+	line-height:1.4;
+}
+
+#box button{
+	display: block;
+	margin: 50px auto 0 auto;
+	
+	font:inherit;
+	font-weight:bold;
+	font-size:20px;
+
+	cursor:pointer;
+
+	background-color:#3dcc5e;
+	color:#fff;
+	padding:20px 45px;
+
+	border:none;
+	border-bottom:3px solid #00ff24;
+	border-radius: 5px	;
+}
+
+#box button:hover{
+	background-color:#5dff82;
+}
+
+#box button:active{
+	position:-1px;
+}
+
+footer{
+
+	width: 135px;
+	font: normal 16px Arial, Helvetica, sans-serif;
+	padding: 10px 35px;
+	position: fixed;
+	bottom: 0;
+	right: 35%;
+	margin-right: -650px;
+
+	background-color:#1f1f1f;
+
+	background-image:-webkit-linear-gradient(top, #1f1f1f, #101010);
+	background-image:-moz-linear-gradient(top, #1f1f1f, #101010);
+	background-image:linear-gradient(top, #1f1f1f, #101010);
+
+	border-radius:2px 2px 0 0;
+
+	box-shadow: 0 -1px 4px rgba(0,0,0,1.0);
+	z-index:1;
+}
+
+footer a.download{
+	font-weight:normal;
+	font-size:16px !important;
+	text-decoration:none !important;
+	display:block;
+	margin-right: 300px;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	color:#2bd104;
+	z-index:1;
+}
+
+.btn-login {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: #12ec45;
+	color: #fff;
+	z-index: 10;
+	border-radius: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.btn-login:visited {
+	color: #fff;
+}
+
+.alerta {
+	position: fixed;
+	right: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
+	padding: 20px 30px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	animation: showAlert 1s backwards;
+}
+
+.alerta.hide-alert {
+	animation: hideAlert 1s backwards;
+}
+
+@keyframes showAlert {
+	0% {
+		top: -100px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+@keyframes hideAlert {
+	0% {
+		top: 0px;
+	}
+	100% {
+		top: -100px;
+	}
+}
+
+.success {
+	background-color: #12ec45;
+}
+
+.empty-player {
+	padding: 30px 0;
+}
+
+.empty-player em {
+	font-size: 70px;
+	display: block;
+	text-align: center;
+}
+
+.empty-player h3 {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.logout {
+	background-color: #dc143c;
+	padding: 10px 30px;
+	border-radius:5px;
+	text-decoration: none;
+	color: #ffd;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.logout:visited,
+.change-password:visited {
+	color: #fff;
+}
+
+.change-password {
+	background-color: #147bdc;
+	padding: 10px 30px;
+	border-radius:5px;
+	text-decoration: none;
+	color: #ffd;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.options-links {
+	text-align: center;
+}
+
+.items-container {
+	margin: 30px 0;
+}
+
+.item {
+	margin: 20px 0;
+}
+
+.item p {
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	column-gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.item p em {
+	font-size: 30px;
+}
+
+.item p span {
+	font-weight: bold;
+}
+
+.image {
+	text-align: center;
+}
+
+.image img {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #fff;
+	border-radius: 30%;
+	object-fit: cover;
+}
